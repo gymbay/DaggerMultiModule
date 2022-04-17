@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DaggerMultiModule.iml" filepath="$PROJECT_DIR$/.idea/modules/DaggerMultiModule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android/DaggerMultiModule.android.iml" filepath="$PROJECT_DIR$/.idea/modules/android/DaggerMultiModule.android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/DaggerMultiModule.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/DaggerMultiModule.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/DaggerMultiModule.core.iml" filepath="$PROJECT_DIR$/.idea/modules/core/DaggerMultiModule.core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/feature1/DaggerMultiModule.feature1.iml" filepath="$PROJECT_DIR$/.idea/modules/feature1/DaggerMultiModule.feature1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/feature2/DaggerMultiModule.feature2.iml" filepath="$PROJECT_DIR$/.idea/modules/feature2/DaggerMultiModule.feature2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/models/DaggerMultiModule.models.iml" filepath="$PROJECT_DIR$/.idea/modules/models/DaggerMultiModule.models.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/network/DaggerMultiModule.network.iml" filepath="$PROJECT_DIR$/.idea/modules/network/DaggerMultiModule.network.iml" />
+    </modules>
+  </component>
+</project>

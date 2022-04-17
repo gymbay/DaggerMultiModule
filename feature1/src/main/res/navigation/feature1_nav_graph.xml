@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/feature1_nav_graph"
+    app:startDestination="@id/feature1Fragment">
+
+    <fragment
+        android:id="@+id/feature1Fragment"
+        android:name="ru.gymbay.feature1.Feature1Fragment"
+        android:label="@string/fragment_label"
+        tools:layout="@layout/fragment_feature1" />
+
+</navigation>

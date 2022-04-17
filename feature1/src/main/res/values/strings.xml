@@ -1,0 +1,6 @@
+<resources>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Feature 1 fragment</string>
+    <string name="fragment_label">Feature1</string>
+    <string name="to_feature_2">To feature 2</string>
+</resources>

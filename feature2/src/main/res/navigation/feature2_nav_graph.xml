@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/feature2_nav_graph"
+    app:startDestination="@id/feature2Fragment">
+
+    <fragment
+        android:id="@+id/feature2Fragment"
+        android:name="ru.gymbay.feature2.Feature2Fragment"
+        android:label="@string/feature2_fragment_label"
+        tools:layout="@layout/fragment_feature2" >
+
+        <deepLink
+            app:uri="@string/nav_key_feature2" />
+
+    </fragment>
+
+</navigation>
