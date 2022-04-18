@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import androidx.navigation.fragment.findNavController
-import ru.gymbay.android.navigation.navigateToFeature2
+import ru.gymbay.android.navigation.Feature2Route
 import ru.gymbay.android.navigation.toFeatureRequest
 
 // TODO: Rename parameter arguments, choose names that match
@@ -54,8 +54,8 @@ class Feature1Fragment : Fragment() {
         button?.setOnClickListener {
             val enteredText = editText?.text.toString()
 
-            val request = toFeatureRequest(resources) {
-                navigateToFeature2(enteredText)
+            val request = toFeatureRequest(Feature2Route(resources)) {
+                isin = enteredText
             }
             findNavController().navigate(request)
         }

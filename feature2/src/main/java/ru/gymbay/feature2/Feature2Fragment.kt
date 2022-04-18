@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import ru.gymbay.android.navigation.Feature2Route
 
 /**
  * A simple [Fragment] subclass.
@@ -22,7 +23,7 @@ class Feature2Fragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            isin = it.getString("isin")
+            isin = it.getString(Feature2Route.ISIN)
         }
     }
 
