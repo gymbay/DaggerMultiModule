@@ -5,11 +5,12 @@ import dagger.BindsInstance
 import dagger.Component
 import dagger.Module
 import dagger.Provides
+import ru.gymbay.feature2.Feature2Dependencies
 import ru.gymbay.network.NetworkProvider
 import javax.inject.Scope
 
 @[AppScope Component(modules = [AppModule::class])]
-interface AppComponent {
+interface AppComponent: Feature2Dependencies {
 
     @Component.Builder
     interface Builder {

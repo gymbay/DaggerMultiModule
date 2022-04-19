@@ -51,6 +51,8 @@ class Feature1Fragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        editText?.setText("RU000A0JXPG2")
+
         button?.setOnClickListener {
             val enteredText = editText?.text.toString()
 

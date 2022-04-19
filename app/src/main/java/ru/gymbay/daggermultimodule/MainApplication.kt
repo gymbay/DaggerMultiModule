@@ -3,10 +3,11 @@ package ru.gymbay.daggermultimodule
 import android.app.Application
 import ru.gymbay.daggermultimodule.di.AppComponent
 import ru.gymbay.daggermultimodule.di.DaggerAppComponent
+import ru.gymbay.feature2.Feature2DependenciesStore
 
 class MainApplication : Application() {
 
-    val appComponent: AppComponent by lazy {
+    private val appComponent: AppComponent by lazy {
         DaggerAppComponent.builder()
             .application(this)
             .build()
@@ -14,6 +15,7 @@ class MainApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
+        Feature2DependenciesStore.dependencies = appComponent
     }
 
 }

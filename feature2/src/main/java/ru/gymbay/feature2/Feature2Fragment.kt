@@ -1,24 +1,38 @@
 package ru.gymbay.feature2
 
+import android.annotation.SuppressLint
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.get
+import androidx.lifecycle.lifecycleScope
 import ru.gymbay.android.navigation.Feature2Route
+import ru.gymbay.core.network.MoexService
+import ru.gymbay.models.Board
+import javax.inject.Inject
 
-/**
- * A simple [Fragment] subclass.
- * Use the [Feature2Fragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class Feature2Fragment : Fragment() {
 
     private var isin: String? = null
 
     private val isinText: TextView?
         get() = view?.findViewById(R.id.isin)
+
+    @Inject
+    lateinit var moexService: MoexService
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        ViewModelProvider(this)
+            .get<Feature2ComponentViewModel>()
+            .feature2Component
+            .inject(this)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,9 +48,16 @@ class Feature2Fragment : Fragment() {
         return inflater.inflate(R.layout.fragment_feature2, container, false)
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        isinText?.text = "My isin $isin"
+
+        lifecycleScope.launchWhenCreated {
+            if (isin == null) return@launchWhenCreated
+            val history = moexService.getBondHistory(Board.TQCB, isin!!, "2022-02-11")
+            val bondInfo = history.getOrNull(1)?.history?.firstOrNull()
+            isinText?.text = "Bond short name is ${bondInfo?.shortName ?: "<Not found>"}"
+        }
     }
 
 }
