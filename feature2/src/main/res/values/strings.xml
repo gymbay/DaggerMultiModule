@@ -2,4 +2,5 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="feature2Text">Feature 2 fragment</string>
     <string name="feature2_fragment_label">Feature2</string>
+    <string name="day_news">Новость дня</string>
 </resources>

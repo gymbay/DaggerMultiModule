@@ -1,6 +1,7 @@
-package ru.gymbay.models
+package ru.gymbay.models.bond
 
 import com.squareup.moshi.Json
+import ru.gymbay.models.bond.Board
 
 data class BondMarketInfo(
     @field:Json(name = "BOARDID")

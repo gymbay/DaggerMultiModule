@@ -1,15 +1,14 @@
 package ru.gymbay.daggermultimodule.di
 
 import android.app.Application
-import dagger.BindsInstance
-import dagger.Component
-import dagger.Module
-import dagger.Provides
+import dagger.*
+import ru.gymbay.core.repositories.NewsRepository
 import ru.gymbay.feature2.Feature2Dependencies
 import ru.gymbay.network.NetworkProvider
+import ru.gymbay.repositories.NewsRepositoryImpl
 import javax.inject.Scope
 
-@[AppScope Component(modules = [AppModule::class])]
+@[AppScope Component(modules = [NetworkModule::class, RepositoriesModule::class])]
 interface AppComponent: Feature2Dependencies {
 
     @Component.Builder
@@ -25,11 +24,15 @@ interface AppComponent: Feature2Dependencies {
 }
 
 @Module
-class AppModule {
-
+class NetworkModule {
     @[Provides AppScope]
     fun provideMoexService() = NetworkProvider().createMoexService()
+}
 
+@Module
+interface RepositoriesModule {
+    @[Binds]
+    fun bindNewsRepositoryImplToNewsRepository(newsRepositoryImpl: NewsRepositoryImpl): NewsRepository
 }
 
 @Scope

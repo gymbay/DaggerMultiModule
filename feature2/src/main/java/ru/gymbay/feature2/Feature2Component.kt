@@ -3,8 +3,9 @@ package ru.gymbay.feature2
 import androidx.annotation.RestrictTo
 import androidx.lifecycle.ViewModel
 import dagger.Component
-import ru.gymbay.core.network.Feature
+import ru.gymbay.core.annotations.Feature
 import ru.gymbay.core.network.MoexService
+import ru.gymbay.core.repositories.NewsRepository
 import kotlin.properties.Delegates.notNull
 
 @[Feature Component(dependencies = [Feature2Dependencies::class])]
@@ -22,6 +23,7 @@ internal interface Feature2Component {
 
 interface Feature2Dependencies {
     val moexService: MoexService
+    val newsRepository: NewsRepository
 }
 
 internal interface Feature2DependenciesProvider {

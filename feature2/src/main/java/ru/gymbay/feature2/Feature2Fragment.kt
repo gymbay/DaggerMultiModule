@@ -13,7 +13,8 @@ import androidx.lifecycle.get
 import androidx.lifecycle.lifecycleScope
 import ru.gymbay.android.navigation.Feature2Route
 import ru.gymbay.core.network.MoexService
-import ru.gymbay.models.Board
+import ru.gymbay.core.repositories.NewsRepository
+import ru.gymbay.models.bond.Board
 import javax.inject.Inject
 
 class Feature2Fragment : Fragment() {
@@ -23,8 +24,14 @@ class Feature2Fragment : Fragment() {
     private val isinText: TextView?
         get() = view?.findViewById(R.id.isin)
 
+    private val news: TextView?
+        get() = view?.findViewById(R.id.news)
+
     @Inject
     lateinit var moexService: MoexService
+
+    @Inject
+    lateinit var newsRepository: NewsRepository
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -57,6 +64,11 @@ class Feature2Fragment : Fragment() {
             val history = moexService.getBondHistory(Board.TQCB, isin!!, "2022-02-11")
             val bondInfo = history.getOrNull(1)?.history?.firstOrNull()
             isinText?.text = "Bond short name is ${bondInfo?.shortName ?: "<Not found>"}"
+        }
+
+        lifecycleScope.launchWhenCreated {
+            val newsList = newsRepository.get()
+            news?.text = newsList.first().title
         }
     }
 
