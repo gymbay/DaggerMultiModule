@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/DaggerMultiModule.iml" filepath="$PROJECT_DIR$/.idea/modules/DaggerMultiModule.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/android/DaggerMultiModule.android.iml" filepath="$PROJECT_DIR$/.idea/modules/android/DaggerMultiModule.android.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/DaggerMultiModule.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/DaggerMultiModule.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common_feature/DaggerMultiModule.common_feature.iml" filepath="$PROJECT_DIR$/.idea/modules/common_feature/DaggerMultiModule.common_feature.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/DaggerMultiModule.core.iml" filepath="$PROJECT_DIR$/.idea/modules/core/DaggerMultiModule.core.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/feature1/DaggerMultiModule.feature1.iml" filepath="$PROJECT_DIR$/.idea/modules/feature1/DaggerMultiModule.feature1.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/feature2/DaggerMultiModule.feature2.iml" filepath="$PROJECT_DIR$/.idea/modules/feature2/DaggerMultiModule.feature2.iml" />

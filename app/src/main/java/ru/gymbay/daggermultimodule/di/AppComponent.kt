@@ -2,6 +2,7 @@ package ru.gymbay.daggermultimodule.di
 
 import android.app.Application
 import dagger.*
+import ru.gymbay.common_feature.CommonFeatureDependencies
 import ru.gymbay.core.repositories.NewsRepository
 import ru.gymbay.feature2.Feature2Dependencies
 import ru.gymbay.network.NetworkProvider
@@ -9,7 +10,10 @@ import ru.gymbay.repositories.NewsRepositoryImpl
 import javax.inject.Scope
 
 @[AppScope Component(modules = [NetworkModule::class, RepositoriesModule::class])]
-interface AppComponent: Feature2Dependencies {
+interface AppComponent:
+    Feature2Dependencies,
+    CommonFeatureDependencies
+{
 
     @Component.Builder
     interface Builder {
@@ -31,7 +35,7 @@ class NetworkModule {
 
 @Module
 interface RepositoriesModule {
-    @[Binds]
+    @Binds
     fun bindNewsRepositoryImplToNewsRepository(newsRepositoryImpl: NewsRepositoryImpl): NewsRepository
 }
 
