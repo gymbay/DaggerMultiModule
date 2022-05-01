@@ -18,6 +18,11 @@
         android:text="@string/day_news"
         android:textAlignment="center"/>
 
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/random_new_layout" />
+
     <TextView
         android:id="@+id/news"
         android:layout_width="match_parent"

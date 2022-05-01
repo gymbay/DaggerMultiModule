@@ -64,13 +64,14 @@ class Feature2Fragment : Fragment() {
             if (isin == null) return@launchWhenCreated
             val history = moexService.getBondHistory(Board.TQCB, isin!!, "2022-02-11")
             val bondInfo = history.getOrNull(1)?.history?.firstOrNull()
-            isinText?.text = "Bond short name is ${bondInfo?.shortName ?: "<Not found>"}"
+            isinText?.text = "SERVICE INVOKE: Bond short name is ${bondInfo?.shortName ?: "<Not found>"}"
         }
 
-        lifecycleScope.launchWhenCreated {
-            val newsList = newsRepository.get()
-            news?.text = "${newsList.first().title}. \nUtil result: ${112332.33.formatToString()}"
-        }
+//        lifecycleScope.launchWhenCreated {
+//            val newsList = newsRepository.get()
+//            news?.text = "${newsList.first().title}. \nUtil result: ${112332.33.formatToString()}"
+//        }
+        news?.text = "UTIL INVOKE: ${112332.33.formatToString()}"
     }
 
 }

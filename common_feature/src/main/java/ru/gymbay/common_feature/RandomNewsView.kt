@@ -41,7 +41,7 @@ internal class RandomNewsView(
             val newsList = newsRepository.get()
 
             withContext(Dispatchers.Main) {
-                newsText?.text = newsList.first().title
+                newsText?.text = "COMMON FEATURE: ${newsList.first().title}"
             }
         }
     }
