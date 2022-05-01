@@ -33,7 +33,6 @@ dependencies {
     api "androidx.core:core-ktx:${rootProject.core_ktx_version}"
 
     api "org.jetbrains.kotlinx:kotlinx-coroutines-android:${rootProject.coroutines_version}"
-    api "org.jetbrains.kotlin:kotlin-reflect:${rootProject.kotlin_reflect_version}"
 
     api "com.google.dagger:dagger:${rootProject.dagger_version}"
 
