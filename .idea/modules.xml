@@ -12,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/models/DaggerMultiModule.models.iml" filepath="$PROJECT_DIR$/.idea/modules/models/DaggerMultiModule.models.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/network/DaggerMultiModule.network.iml" filepath="$PROJECT_DIR$/.idea/modules/network/DaggerMultiModule.network.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/repositories/DaggerMultiModule.repositories.iml" filepath="$PROJECT_DIR$/.idea/modules/repositories/DaggerMultiModule.repositories.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/resources/DaggerMultiModule.resources.iml" filepath="$PROJECT_DIR$/.idea/modules/resources/DaggerMultiModule.resources.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/utils/DaggerMultiModule.utils.iml" filepath="$PROJECT_DIR$/.idea/modules/utils/DaggerMultiModule.utils.iml" />
     </modules>
   </component>
