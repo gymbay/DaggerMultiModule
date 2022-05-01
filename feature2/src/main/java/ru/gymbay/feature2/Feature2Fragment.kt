@@ -15,6 +15,7 @@ import ru.gymbay.android.navigation.Feature2Route
 import ru.gymbay.core.network.MoexService
 import ru.gymbay.core.repositories.NewsRepository
 import ru.gymbay.models.bond.Board
+import ru.gymbay.utils.extensions.formatToString
 import javax.inject.Inject
 
 class Feature2Fragment : Fragment() {
@@ -68,7 +69,7 @@ class Feature2Fragment : Fragment() {
 
         lifecycleScope.launchWhenCreated {
             val newsList = newsRepository.get()
-            news?.text = newsList.first().title
+            news?.text = "${newsList.first().title}. \nUtil result: ${112332.33.formatToString()}"
         }
     }
 
