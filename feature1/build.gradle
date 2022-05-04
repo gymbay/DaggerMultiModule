@@ -32,5 +32,4 @@ android {
 dependencies {
     implementation project(":android")
     implementation project(":common_feature")
-    implementation project(":resources")
 }

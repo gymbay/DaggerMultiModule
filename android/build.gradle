@@ -38,4 +38,5 @@ dependencies {
     api "androidx.navigation:navigation-ui-ktx:${rootProject.nav_version}"
 
     api project(":core")
+    api project(":resources")
 }
