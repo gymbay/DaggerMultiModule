@@ -26,6 +26,8 @@ interface Feature2Dependencies {
     val newsRepository: NewsRepository
 }
 
+// Обеспечивает хранение графа зависимостей AppComponent: Feature2Dependencies
+
 internal interface Feature2DependenciesProvider {
     @get:RestrictTo(RestrictTo.Scope.LIBRARY)
     val dependencies: Feature2Dependencies
@@ -36,6 +38,8 @@ internal interface Feature2DependenciesProvider {
 object Feature2DependenciesStore : Feature2DependenciesProvider {
     override var dependencies: Feature2Dependencies by notNull()
 }
+
+// Отвечает за создание графа Feature2Component и жизненный цикл
 
 internal class Feature2ComponentViewModel : ViewModel() {
     val feature2Component =
