@@ -11,6 +11,7 @@ import android.widget.TextView
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.get
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import ru.gymbay.android.navigation.Feature2Route
 import ru.gymbay.core.network.MoexService
 import ru.gymbay.core.repositories.NewsRepository
@@ -36,7 +37,8 @@ class Feature2Fragment : Fragment() {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        ViewModelProvider(this)
+        val vmStore = findNavController().getViewModelStoreOwner(R.id.feature2_nav_graph)
+        ViewModelProvider(vmStore)
             .get<Feature2ComponentViewModel>()
             .feature2Component
             .inject(this)
